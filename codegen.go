@@ -41,13 +41,13 @@ type solution interface {
 
 type solution1 struct{}
 
-func (s solution1) {{ .Func }} {
+func (s1 solution1) {{ .Func }} {
 	return nil
 }
 
 type solution2 struct{}
 
-func (s solution2) {{ .Func }} {
+func (s2 solution2) {{ .Func }} {
 	return nil
 }`
 
@@ -86,7 +86,7 @@ func TestSolution(t *testing.T) {
 
 	s := solution1{}
 	for _, test := range tests {
-		if got := s.(); !reflect.DeepEqual(got, test.want) {
+		if got := s; !reflect.DeepEqual(got, test.want) {
 			t.Errorf("got %q, want %q", got, test.want)
 		}
 	}
