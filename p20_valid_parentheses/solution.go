@@ -1,6 +1,13 @@
-package p20
+// https://leetcode.cn/problems/valid-parentheses/
+package p20_valid_parentheses
 
-func isValid(s string) bool {
+type solution interface {
+	isValid(s string) bool
+}
+
+type solution1 struct{}
+
+func (s1 solution1) isValid(s string) bool {
 	var stack []rune
 	for _, c := range s {
 		if c == '(' || c == '[' || c == '{' {
@@ -12,7 +19,7 @@ func isValid(s string) bool {
 			}
 			n := len(stack) - 1
 			top := stack[n]
-			if isPair(top, c) {
+			if s1.isPair(top, c) {
 				stack = stack[:n]
 			} else {
 				return false
@@ -22,6 +29,6 @@ func isValid(s string) bool {
 	return len(stack) == 0
 }
 
-func isPair(a, b rune) bool {
+func (s1 solution1) isPair(a, b rune) bool {
 	return (a == '(' && b == ')') || (a == '[' && b == ']') || (a == '{' && b == '}')
 }

@@ -1,5 +1,5 @@
 {
-    "package": "p1_two_sum",
-    "func": "twoSum(nums []int, target int) []int",
-    "url": "https://leetcode.cn/problems/two-sum/"
+    "package": "p20_valid_parentheses",
+    "func": "isValid(s string) bool",
+    "url": "https://leetcode.cn/problems/valid-parentheses/"
 }
