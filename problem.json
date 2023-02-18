@@ -1,5 +1,5 @@
 {
-    "package": "p20_valid_parentheses",
-    "func": "isValid(s string) bool",
-    "url": "https://leetcode.cn/problems/valid-parentheses/"
+    "package": "jzoffer030",
+    "func": "",
+    "url": "https://leetcode-cn.com/problems/insert-delete-getrandom-o1/"
 }
